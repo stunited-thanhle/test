@@ -6,6 +6,10 @@ import "../App.css";
 function Part01() {
   const [count, setCount] = useState(0);
 
+  // const handleSetCount = () => {
+  //   setCount(count + 1);
+  // };
+
   return (
     <div className="App">
       <div>

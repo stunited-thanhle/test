@@ -11,4 +11,5 @@ const Form = ({ total, submitForm }) => {
   );
 };
 
+// export default Form;
 export default memo(Form);

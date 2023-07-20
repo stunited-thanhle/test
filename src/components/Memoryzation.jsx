@@ -14,7 +14,7 @@ const Memoryzation = () => {
   };
 
   console.time("fibonaci");
-  //   const result = fibonaci(43);
+  // const result = fibonaci(43);
   const result = useMemo(() => {
     return fibonaci(43);
   }, []);

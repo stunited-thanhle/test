@@ -4,24 +4,31 @@ const Ref = () => {
   const ref = useRef(null);
   const [count, setCount] = useState(100);
 
+  const currentRef = useRef();
+  const time = useRef();
+
   useEffect(() => {
     ref.current.focus();
-  }, []);
+    currentRef.current = count;
+  }, [count]);
 
-  const currentRef = useRef(0);
-
-  //   let timeID;
+  let timeID;
 
   const handleStart = () => {
-    currentRef.current = setInterval(() => {
+    // timeID = setInterval(() => {
+    //   setCount((precount) => precount - 1);
+    // }, 1000);
+    time.current = setInterval(() => {
       setCount((precount) => precount - 1);
     }, 1000);
   };
 
   const handleStop = () => {
-    clearInterval(currentRef.current);
+    // clearInterval(timeID);
+    clearInterval(time.current);
   };
 
+  console.log(count, currentRef.current);
   return (
     <div>
       <input type="text" ref={ref} />

@@ -14,6 +14,7 @@ const Clock = () => {
   const [time, setTime] = useState("");
 
   useEffect(() => {
+    //Component Did mount
     const clockInterval = setInterval(() => {
       const now = new Date();
 
@@ -24,6 +25,7 @@ const Clock = () => {
     }, 1000);
 
     return () => {
+      //componentWillUnmount
       clearInterval(clockInterval);
     };
   }, []);

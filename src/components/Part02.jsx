@@ -10,23 +10,24 @@ const Part02 = () => {
   });
 
   // []
-  //   const [post, setPost] = useState([]);
-  //   useEffect(() => {
-  //     fetch("https://jsonplaceholder.typicode.com/posts")
-  //       .then((response) => response.json())
-  //       .then((post) => setPost(post));
-  //   }, []);
+  // const [post, setPost] = useState([]);
+  // useEffect(() => {
+  //   fetch("https://jsonplaceholder.typicode.com/posts")
+  //     .then((response) => response.json())
+  //     .then((post) => setPost(post));
+  // }, []);
 
   //[deps]
-  //   const btns = ["posts", "users", "albums"];
-  //   const [action, setAction] = useState("users");
-  //   const [data, setData] = useState([]);
+  // const btns = ["posts", "users", "albums"];
+  // const [action, setAction] = useState("users");
+  // const [data, setData] = useState([]);
 
-  //   useEffect(() => {
-  //     fetch(`https://jsonplaceholder.typicode.com/${action}`)
-  //       .then((response) => response.json())
-  //       .then((rs) => setData(rs));
-  //   }, [action]);
+  // useEffect(() => {
+  //   //componentDidmount & componentDidUpdate
+  //   fetch(`https://jsonplaceholder.typicode.com/${action}`)
+  //     .then((response) => response.json())
+  //     .then((rs) => setData(rs));
+  // }, [action]);
 
   //Cleanup
   const [toggle, setToggle] = useState(true);
@@ -49,8 +50,8 @@ const Part02 = () => {
         ))}
       </div> */}
 
-      {/* {toggle && <Clock />}
-      <button onClick={() => setToggle(!toggle)}>Next Page</button> */}
+      {toggle && <Clock />}
+      <button onClick={() => setToggle(!toggle)}>Next Page</button>
     </div>
   );
 };
